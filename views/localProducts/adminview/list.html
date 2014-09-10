@@ -1,0 +1,14 @@
+<h2>Lightsabers for Sale</h2>
+<p><a href="#/productLocal/admin/new">Add Lightsaber</a></p>
+<button><a href="#/productLocal/admin/cart">View Cart ({{cartProducts.length}})</a></button>
+<button><a href="#/productLocal">User View</a></button>
+<hr>
+<article ng-repeat="product in products">
+ <p><img src="{{product.image}}"></p>
+ <h2>{{product.title}}</h2>
+ <p>{{product.content}}</p>
+ <button><a href="#/productLocal/admin/{{$index}}">View Product</a></button>
+ <button ng-click="addToCart(product)">Add To Cart</button>
+<button><a href=""ng-click="deleteProduct($index)">Delete</a></button>||<button><a href="#/productLocal/admin/{{$index}}/edit">Edit</a></button>
+<hr>
+</article>

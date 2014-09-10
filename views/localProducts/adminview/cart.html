@@ -1,0 +1,9 @@
+<h2>You Will Buy These Lightsabers</h2>
+<article ng-repeat="product in cartProducts">
+ <h4>{{product.title}}</h4>
+ <h5>Credits: {{product.price}}</h5>
+ <p>{{product.content}}</p>
+ <p><img src="{{product.image}}" alt=""></p>
+ <button ng-click="deleteFromCart($index)">Delete From Cart</button>
+</article>
+<button><a href="#/productLocal/admin">Back To Store</a></button>

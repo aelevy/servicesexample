@@ -1,0 +1,20 @@
+<article>
+<h1>{{singleProduct.title}}</h1>
+<h3>Credits: {{singleProduct.price}}</h3>
+<p>{{singleProduct.content}}</p>
+<p><img src="{{singleProduct.image}}" alt=""></p>
+<button ng-click="addToCart(singleProduct)">Add To Cart</button>
+<button><a href="#/productLocal/cart">View Cart</a></button>
+<button><a href="#/productLocal">Back To Store</a></button>
+</article>
+<article ng-repeat="review in singleProduct.reviews">
+<p>Stars: {{review.stars}}</p>
+<p> {{review.body}}</p>
+<p>By: {{review.author}}</p>
+</article>
+<form action="" ng-submit="addReview(newReview)">
+<input type="number" placeholder="Stars" ng-model="newReview.stars">
+<input type="text" placeholder="Review" ng-model="newReview.body">
+<input type="text" placeholder="Email" ng-model="newReview.author">
+<button type="submit">Submit</button>
+</form>

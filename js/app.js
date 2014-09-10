@@ -1,4 +1,4 @@
-angular.module("babyAmazon",["localService","ngRoute"])
+angular.module("babyAmazon",["localService","app.directives", "ngRoute"])
 
 .config(function ($routeProvider) {
 
