@@ -12,7 +12,6 @@
 </article> -->
 <article ng-repeat="product in products">
   <product-list title="{{product.title}}" content="{{product.content}}" image="{{product.image}}">
-
   </product-list>
   <button><a href="#/productLocal/{{$index}}">View Product</a></button>
   <button ng-click="addToCart(product)">Add To Cart</button>

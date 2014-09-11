@@ -1,4 +1,4 @@
-<article>
+<!-- <article>
 <h1>{{singleProduct.title}}</h1>
 <h3>Credits: {{singleProduct.price}}</h3>
 <p>{{singleProduct.content}}</p>
@@ -6,6 +6,13 @@
 <button ng-click="addToCart(singleProduct)">Add To Cart</button>
 <button><a href="#/productLocal/cart">View Cart</a></button>
 <button><a href="#/productLocal">Back To Store</a></button>
+</article> -->
+<article>
+ <show-item title="{{singleProduct.title}}" price="{{singleProduct.price}}" content="{{singleProduct.content}}" image="{{singleProduct.image}}">
+ </show-item>
+ <button ng-click="addToCart(singleProduct)">Add To Cart</button>
+ <button><a href="#/productLocal/cart">View Cart</a></button>
+ <button><a href="#/productLocal">Back To Store</a></button>
 </article>
 <article ng-repeat="review in singleProduct.reviews">
 <p>Stars: {{review.stars}}</p>

@@ -13,7 +13,33 @@ angular.module("app.directives", [])
         content:"@",
         image:"@"
        },
-       templateUrl: "views/directives.html",
+       templateUrl: "views/directives/listDirective.html",
+      }
+     })
+
+     .directive("showItem",function (){
+      return{
+       restrict:"E",
+       scope: {
+        title:"@",
+        price:"@",
+        content:"@",
+        image:"@"
+       },
+       templateUrl: "views/directives/showDirective.html"
+      }
+     })
+
+     .directive("cartList", function (){
+      return{
+       restrict:"E",
+       scope: {
+        title:"@",
+        price:"@",
+        content:"@",
+        image:"@"
+       },
+       templateUrl: "views/directives/cartDirective.html"
       }
      })
   // .directive("profileCard", function() {
